@@ -1,0 +1,6 @@
+.navigation{
+    background-color: #333333;
+    padding: 10px;
+    color: white;
+    border-bottom: 2px solid linear-gradient(to #ffc0cb, #ffff00, #0000ff);
+}
