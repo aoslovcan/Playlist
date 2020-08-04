@@ -1,6 +1,24 @@
 .navigation{
-    background-color: #333333;
-    padding: 10px;
-    color: white;
-    border-bottom: 2px solid linear-gradient(to #ffc0cb, #ffff00, #0000ff);
+ background-color: #333333;
+ padding: 10px;
+ color: white;
+ border-bottom: 10px solid;
+ border-image-slice: 1;
+ border-width: 5px;
+ border-image-source: linear-gradient(to right, #ffc0cb, #ffff00,#b3b3ff );
+}
+
+/*Playlist*/
+.section{
+    background: #ffc0cb;
+    background: linear-gradient(to right, #b3b3ff,#ffc0cb);
+   /* background-image: url('../assets/img/background.jpg');
+    background-size: cover;
+  
+    background-repeat: no-repeat;
+    background-position: center 50px 30px;*/
+
+    height: 83.7vh;
+
+    color: rgb(255, 255, 255);
 }

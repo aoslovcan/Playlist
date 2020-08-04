@@ -9,10 +9,8 @@ function Nav() {
                 <h3><FontAwesomeIcon icon='music' color='#ffc0cb' /></h3>
                 <h3> <FontAwesomeIcon icon='music' color='#ffff00' /> Dobrodošli u TopPop <FontAwesomeIcon icon='music' color='#008000' />
                 </h3>
-                <h3><FontAwesomeIcon icon='music' color='#0000ff' /> </h3>
+                <h3><FontAwesomeIcon icon='music' color='#b3b3ff' /> </h3>
             </div>
-
-
         </>
     );
 }
