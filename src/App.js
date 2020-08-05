@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMusic } from '@fortawesome/free-solid-svg-icons';
+import { faMusic, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './routers/Home';
 
-library.add(faMusic);
+library.add(faMusic, faPlayCircle);
 
 function App() {
   return (

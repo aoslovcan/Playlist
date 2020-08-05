@@ -20,5 +20,20 @@
 
     height: 83.7vh;
 
-    color: rgb(255, 255, 255);
+    color: rgb(0,0,0);
 }
+
+.section .list-group{
+    text-align: left;
+    width: 500px;
+    margin: auto;
+    
+}
+.more{
+    color: green;
+}
+.container {
+    top: 20%;
+    position: relative;
+}
+

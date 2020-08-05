@@ -33,13 +33,13 @@ server.get('/chart', (req, res) => {
         if (error || response.statusCode !== 200) {
           return res.status(500).json({ type: 'error', message: err.message });
         }
- 
+
         res.end(JSON.stringify(body));
 
      
       }
     )
-   
+    
   });
 
 
