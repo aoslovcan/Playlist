@@ -12,15 +12,9 @@
 .section{
     background: #ffc0cb;
     background: linear-gradient(to right, #b3b3ff,#ffc0cb);
-   /* background-image: url('../assets/img/background.jpg');
-    background-size: cover;
-  
-    background-repeat: no-repeat;
-    background-position: center 50px 30px;*/
-
-    height: 83.7vh;
-
+    height: 86vh;
     color: rgb(0,0,0);
+  
 }
 
 .section .list-group{
@@ -30,10 +24,71 @@
     
 }
 .more{
-    color: green;
+    background-color: #b3b3ff;
+    background-color: linear-gradient(to right, #b3b3ff,#ffc0cb);
+    border: 1px solid teal;
+    border-radius: 24px;
 }
 .container {
-    top: 20%;
+    top: 5%;
     position: relative;
 }
 
+.modal-dialog{
+
+    position: fixed !important;
+    width: 500px;
+    margin: auto;
+    top: 40%;
+    left: 35%;
+  
+}
+
+
+.close{
+    background-color: #b3b3ff;
+  color: black;
+    background-size: contain;
+    border: 1px solid teal;
+    border-radius: 24px;
+    text-align: center;
+    padding: 10px;
+    width: 50px;
+    border-radius: 3px;
+    margin-bottom: 2px;
+    height: 50px;
+}
+
+.song{
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: 	 rgb(255, 255, 255);
+  
+    
+}
+
+.song .list-group-item{
+    /*background-color: #b3b3ff;*/
+    background-color: teal;
+    background-color: linear-gradient(to right, #b3b3ff,#ffc0cb);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .modal-dialog {
+     width: 100%;
+     position: fixed;
+     top: 20%;
+     left: 0px;
+    }
+.section{
+
+    height: 100%;
+}
+
+.container{
+    top: 0px;
+    position: relative;
+}
+
+  }
