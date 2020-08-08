@@ -14,7 +14,8 @@ class Playlist extends Component {
 
         this.state = {
             songs: [],
-            visible: true
+            visible: true,
+
 
         }
 
@@ -22,9 +23,9 @@ class Playlist extends Component {
     }
     showModal = () => {
         this.setState({
-          visible: true,
+            visible: true,
         });
-      };
+    };
     componentDidMount() {
 
         const config = {
@@ -51,29 +52,89 @@ class Playlist extends Component {
             })
 
     }
+   
+
+
+    myFunction = e => {
+
+
+        const target = e.target;
+        const value = target.value;
+        /*console.log(value);*/
+        let song = this.state.songs;
+
+        /* console.log(song)*/
+        const list = song.sort((a, b) => a.duration - b.duration).map((exemple, index, array) => exemple)
+        const listDESC = song.sort((a, b) => b.duration - a.duration).map((exemple, index, array) => exemple)
+        /*  console.log(list)
+          console.log(listDESC)*/
+        switch (value) {
+            case 'asc':
+
+                this.setState({
+                    songs: list
+                })
+                console.log(listDESC);
+
+                break;
+            case 'desc':
+                this.setState({
+
+                    songs: listDESC
+                })
+                console.log(list);
+
+                break;
+
+          
+
+        }
+
+
+
+
+
+
+    }
 
 
     render() {
         console.log(this.state.songs);
-        var { songs } = this.state
+        var { songs } = this.state;
 
         return (
             <>
-        
+
                 <div className="section">
                     <div className="container">
                         <div className="row">
-                      
-                            <ul className="list-group">
-                         
-                                {
-                               
-                                
-                                songs.map(song =>
-                                    (
-                                        <Song  items={song}/>
 
-                                    ))}
+
+
+                            <ul className="list-group">
+
+                                <form>
+                                    <label for="songs">Sortiraj po trajanju: </label>
+
+                                    <select onChange={this.myFunction} name="songs" id="song">
+                                        <option name="none" value="none" >None</option>
+                                        <option name="asc" value="asc" >Uzlazno</option>
+                                        <option name="desc" value="desc">Silazno</option>
+
+
+                                    </select>
+                                </form>
+
+
+                                {
+
+
+                                    songs.map(song =>
+                                        (
+                                            <Song items={song} />
+
+                                        ))
+                                }
                             </ul>
                         </div>
                     </div>
