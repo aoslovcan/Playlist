@@ -1,9 +1,8 @@
-const express = require('express');
-const request = require('request');
+let express = require('express');
+let request = require('request');
 let bodyParser = require('body-parser');
-
 let cors = require('cors');
-const { json } = require('express');
+let { json } = require('express');
 
 //Server create
 const server = express();
@@ -25,7 +24,7 @@ server.use((req, res, next) => {
 // aprove connection to server
 server.use(cors());
 
-
+//Get data from server
 server.get('/chart', (req, res) => {
     request(
       { url: 'https://api.deezer.com/chart' },
@@ -33,22 +32,8 @@ server.get('/chart', (req, res) => {
         if (error || response.statusCode !== 200) {
           return res.status(500).json({ type: 'error', message: err.message });
         }
-
         res.end(JSON.stringify(body));
-
-     
       }
     )
     
   });
-
-
-
-
-
-
-
-
-
-
-
